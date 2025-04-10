@@ -1,0 +1,61 @@
+.button {
+  user-select: none;
+  border: none;
+  display: flex;
+  box-sizing: border-box;
+  width: fit-content;
+  padding: 2px;
+  height: 40px;
+  border-radius: 2px;
+  text-decoration: none;
+  font-family: 'Bubblegum Sans';
+  font-size: 20px;
+  letter-spacing: 0.03rem;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 25%) 0px 0px 1.5px;
+  &Inner {
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    margin: 0;
+    border: 1px dashed white;
+    border-radius: 1px;
+  }
+}
+
+.gray {
+  background-image: url("../../assets/background-images/wool-gray.png");
+  &:hover {
+    background-image: url("../../assets/background-images/wool-gray-light.png");
+  }
+  &:active {
+    background-image: url("../../assets/background-images/wool-gray-dark.png");
+  }
+}
+.red {
+  background-image: url("../../assets/background-images/wool-red.png");
+  &:hover {
+    background-image: url("../../assets/background-images/wool-red-light.png");
+  }
+  &:active {
+    background-image: url("../../assets/background-images/wool-red-dark.png");
+  }
+}
+.green {
+  background-image: url("../../assets/background-images/wool-green.png");
+  &:hover {
+    background-image: url("../../assets/background-images/wool-green-light.png");
+  }
+  &:active {
+    background-image: url("../../assets/background-images/wool-green-dark.png");
+  }
+}
+.yellow {
+  background-image: url("../../assets/background-images/wool-yellow.png");
+  &:hover {
+    background-image: url("../../assets/background-images/wool-yellow-light.png");
+  }
+  &:active {
+    background-image: url("../../assets/background-images/wool-yellow-dark.png");
+  }
+}

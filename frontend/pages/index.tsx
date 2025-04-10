@@ -1,3 +1,4 @@
+import Button from '@/components/Button';
 import React from 'react';
 
 interface IHomePageTypes {
@@ -13,7 +14,11 @@ export default function Home({
     <main>
       {data.map((element) => <div key={element.slug}>
         <p>{element.main_text}</p>
-        <p>{element.button_label}</p>
+        <Button
+          linkTo='/speltakken'
+          label={element.button_label}
+          color={'red'}          
+        />
       </div>)}
     </main>
   )
