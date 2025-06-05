@@ -50,7 +50,7 @@ class AgendaItem(models.Model):
 class ScoutingAppInfo(models.Model):
     title = models.CharField(max_length=50)
     image = models.ImageField(default='')
-    image_alt_text = models.CharField(default='', max_length=50)
+    image_alt_text = models.CharField(default='', max_length=255)
     image_caption = models.CharField(max_length=100)
     paragraph_text = models.CharField(max_length=1000)
     button_label = models.CharField(max_length=50)
