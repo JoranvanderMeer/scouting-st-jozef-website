@@ -5,12 +5,22 @@ from django.db import models
 class Banner(models.Model):
     main_text = models.CharField(max_length=80)
     button_label = models.CharField(max_length=50)
-    background_image = models.ImageField
+    image1 = models.ImageField(default='')
+    image1_alt_text = models.CharField(default='', max_length=255)
+    image2 = models.ImageField(default='')
+    image2_alt_text = models.CharField(default='', max_length=255)
+    image3 = models.ImageField(default='')
+    image3_alt_text = models.CharField(default='', max_length=255)
+    image4 =  models.ImageField(default='')
+    image4_alt_text = models.CharField(default='', max_length=255)
+    image5 = models.ImageField(default='')
+    image5_alt_text = models.CharField(default='', max_length=255)
 
 class Speltak(models.Model):
     name = models.CharField(max_length=50)
     age_range = models.CharField(max_length=20)
-    thumbnail = models.ImageField
+    thumbnail = models.ImageField(default='')
+    thumbnail_alt_text = models.CharField(default='', max_length=255)
     gender_info = models.CharField(max_length=1000)
     age_info = models.CharField(max_length=1000)
     activity_list = models.CharField(max_length=1000)
@@ -39,16 +49,20 @@ class AgendaItem(models.Model):
 
 class ScoutingAppInfo(models.Model):
     title = models.CharField(max_length=50)
-    image = models.ImageField
+    image = models.ImageField(default='')
+    image_alt_text = models.CharField(default='', max_length=50)
     image_caption = models.CharField(max_length=100)
     paragraph_text = models.CharField(max_length=1000)
     button_label = models.CharField(max_length=50)
 
 class HuurInfo(models.Model):
     title = models.CharField(max_length=50)
-    image1 = models.ImageField
-    image2 = models.ImageField
-    image3 = models.ImageField
+    image1 = models.ImageField(default='')
+    image1_alt_text = models.CharField(default='', max_length=255)
+    image2 = models.ImageField(default='')
+    image2_alt_text = models.CharField(default='', max_length=255)
+    image3 = models.ImageField(default='')
+    image3_alt_text = models.CharField(default='', max_length=255)
     paragraph_text = models.CharField(max_length=1000)
     button_label = models.CharField(max_length=50)
 
@@ -68,5 +82,5 @@ class Footer(models.Model):
     vrienden_button_label = models.CharField(max_length=50)
     documenten_title = models.CharField(max_length=50)
     huishoudelijk_regelement_button_label = models.CharField(max_length=50)
-    huishoudelijk_regelement = models.FileField
+    huishoudelijk_regelement = models.FileField(default='')
     privacybeleid_button_label = models.CharField(max_length=50)

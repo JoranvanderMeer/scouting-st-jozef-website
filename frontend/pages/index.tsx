@@ -1,4 +1,5 @@
 import Button from '@/components/Button';
+import Polaroid from '@/components/Polaroid';
 import React from 'react';
 
 interface IHomePageTypes {
@@ -18,6 +19,12 @@ export default function Home({
           linkTo='/speltakken'
           label={element.button_label}
           color={'red'}          
+        />
+        <Polaroid
+          imageFile={'/assets/images/spaghetti.jpg'}
+          altText='Spaghetti bolognese'
+          description='Spaghetti bolognese'
+          rotation='left'
         />
       </div>)}
     </main>
