@@ -1,25 +1,26 @@
 import django
 from django.db import models
 
+image_upload_path = 'image_uploads/'
 
 class Banner(models.Model):
     main_text = models.CharField(max_length=80)
     button_label = models.CharField(max_length=50)
-    image1 = models.ImageField(default='')
+    image1 = models.ImageField(default='', upload_to=image_upload_path)
     image1_alt_text = models.CharField(default='', max_length=255)
-    image2 = models.ImageField(default='')
+    image2 = models.ImageField(default='', upload_to=image_upload_path)
     image2_alt_text = models.CharField(default='', max_length=255)
-    image3 = models.ImageField(default='')
+    image3 = models.ImageField(default='', upload_to=image_upload_path)
     image3_alt_text = models.CharField(default='', max_length=255)
-    image4 =  models.ImageField(default='')
+    image4 =  models.ImageField(default='', upload_to=image_upload_path)
     image4_alt_text = models.CharField(default='', max_length=255)
-    image5 = models.ImageField(default='')
+    image5 = models.ImageField(default='', upload_to=image_upload_path)
     image5_alt_text = models.CharField(default='', max_length=255)
 
 class Speltak(models.Model):
     name = models.CharField(max_length=50)
     age_range = models.CharField(max_length=20)
-    thumbnail = models.ImageField(default='')
+    thumbnail = models.ImageField(default='', upload_to=image_upload_path)
     thumbnail_alt_text = models.CharField(default='', max_length=255)
     gender_info = models.CharField(max_length=1000)
     age_info = models.CharField(max_length=1000)
@@ -49,7 +50,7 @@ class AgendaItem(models.Model):
 
 class ScoutingAppInfo(models.Model):
     title = models.CharField(max_length=50)
-    image = models.ImageField(default='')
+    image = models.ImageField(default='', upload_to=image_upload_path)
     image_alt_text = models.CharField(default='', max_length=255)
     image_caption = models.CharField(max_length=100)
     paragraph_text = models.CharField(max_length=1000)
@@ -57,11 +58,11 @@ class ScoutingAppInfo(models.Model):
 
 class HuurInfo(models.Model):
     title = models.CharField(max_length=50)
-    image1 = models.ImageField(default='')
+    image1 = models.ImageField(default='', upload_to=image_upload_path)
     image1_alt_text = models.CharField(default='', max_length=255)
-    image2 = models.ImageField(default='')
+    image2 = models.ImageField(default='', upload_to=image_upload_path)
     image2_alt_text = models.CharField(default='', max_length=255)
-    image3 = models.ImageField(default='')
+    image3 = models.ImageField(default='', upload_to=image_upload_path)
     image3_alt_text = models.CharField(default='', max_length=255)
     paragraph_text = models.CharField(max_length=1000)
     button_label = models.CharField(max_length=50)

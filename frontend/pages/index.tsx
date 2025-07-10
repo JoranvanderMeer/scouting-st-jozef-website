@@ -18,11 +18,11 @@ export default function Home({
         <Button
           linkTo='/speltakken'
           label={element.button_label}
-          color={'red'}          
+          color={'red'}
         />
         <Polaroid
-          imageFile={'/assets/images/spaghetti.jpg'}
-          altText='Spaghetti bolognese'
+          imageFile={element.image1}
+          altText={element.image1_alt_text}
           description='Spaghetti bolognese'
           rotation='left'
         />
