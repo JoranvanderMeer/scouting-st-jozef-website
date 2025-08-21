@@ -3,5 +3,5 @@ from .views import ContentAPIView
 
 
 urlpatterns = [
-    path('content', ContentAPIView.as_view(), name='content'),
+    path('content', ContentAPIView.as_view(), name='content')
 ]

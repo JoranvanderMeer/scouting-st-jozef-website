@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_nextjs',
     'rest_framework',
-    'content.apps.ContentConfig',
+    'content.apps.ContentConfig'
 ]
 
 MIDDLEWARE = [
