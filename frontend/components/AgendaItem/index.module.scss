@@ -1,0 +1,44 @@
+@import '../../styles/utils/semantic-variables';
+
+.agendaItem {
+  display: flex;
+  flex-direction: row-reverse;
+  width: fit-content;
+  gap: 1.6rem;
+
+  &Date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    width: 4rem;
+    padding: .4rem 0 .4rem 0;
+    font-family: 'Lexend Deca';
+    font-weight: bold;
+    color: white;
+    background-color: $primary;
+
+    &Month {
+      font-size: 1.2rem;
+    }
+  }
+
+  &Info {
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    line-height: 2.4rem;
+
+    &Title {
+      font-family: 'Source Sans 3';
+      font-weight: bold;
+      letter-spacing: unset;
+      margin: 0;
+    }
+
+    &Speltak {
+      color: $subtle-text-color;
+    }
+  }
+}

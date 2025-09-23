@@ -1,0 +1,43 @@
+@import'./collection';
+
+html {
+  overflow-x: hidden;
+  font-size: 10px;
+  font-family: 'Source Sans 3';
+  color: $default-text-color;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 .1rem white, 0 0 0 .4rem $focus-ring;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bubblegum Sans';
+  font-weight: normal;
+  letter-spacing: .03rem;
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  margin: 0;
+  font-size: 1.6rem;
+}

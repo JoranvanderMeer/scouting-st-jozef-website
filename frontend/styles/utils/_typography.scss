@@ -1,5 +1,20 @@
 @font-face {
+  font-family: 'Source Sans 3';
+  src: url('../fonts/TTF/SourceSans3-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('../fonts/TTF/SourceSans3-Italic-VariableFont_wght.ttf') format('truetype');
+  font-style: italic;
+}
+
+@font-face {
   font-family: 'Bubblegum Sans';
-  src: 
-    url('~@fonts/TTF/BubblgumSans-Regular.ttf') format('truetype')
+  src: url('../fonts/TTF/BubblegumSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Lexend Deca';
+  src: url('../fonts/TTF/LexendDeca-VariableFont_wght.ttf') format('truetype');
 }

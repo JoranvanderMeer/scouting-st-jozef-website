@@ -27,7 +27,9 @@ const Polaroid: React.FC<PolaroidProps> = ({
         src={imageFile}
         alt={altText}
       />
-      {description && <p className={styles.polaroidDescription}>{description}</p>}
+      <div className={styles.polaroidDescription}>
+        {description && <p className={styles.polaroidDescriptionText}>{description}</p>}
+      </div>
     </div>
   )
 }

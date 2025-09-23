@@ -1,27 +1,27 @@
 .polaroid {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: .6rem;
   align-items: center;
-  width: 358px;
-  height: 289px;
+  width: 35.8rem;
+  height: 28.9rem;
   background-color: white;
-  padding: 16px 16px 8px 16px;
-  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 15%));
+  padding: 1.6rem 1.6rem .8rem 1.6rem;
+  filter: drop-shadow(0 .2rem .2rem rgba(0, 0, 0, 15%));
 
   &Pin {
     position: absolute;
     background-color: #FCFDFE;
-    width: 22px;
-    height: 22px;
-    border-radius: 11px;
-    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 15%));
-    top: -2px;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 1.1rem;
+    filter: drop-shadow(0 .2rem .2rem rgba(0, 0, 0, 15%));
+    top: -.2rem;
     &LeftOffset {
-      left: 150px;
+      left: 15rem;
     }
     &RightOffset {
-      right: 150px;
+      right: 15rem;
     }
   }
 
@@ -31,11 +31,14 @@
   }
 
   &Description {
-    margin: 0;
-    font-family: 'Bubblegum Sans';
-    font-size: 16px;
-    letter-spacing: 0.03rem;
-    color: #8D939E;
+    height: 2.7rem;
+    &Text {
+      margin: 0;
+      font-family: 'Bubblegum Sans';
+      font-weight: normal;
+      letter-spacing: .03rem;
+      color: #8D939E;
+    }
   }
 }
 

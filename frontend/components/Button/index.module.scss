@@ -1,61 +1,63 @@
+@import '../../styles/utils/collection';
+
 .button {
   user-select: none;
   border: none;
   display: flex;
   box-sizing: border-box;
   width: fit-content;
-  padding: 2px;
-  height: 40px;
-  border-radius: 2px;
+  padding: .2rem;
+  height: 4rem;
+  border-radius: .2rem;
   text-decoration: none;
   font-family: 'Bubblegum Sans';
-  font-size: 20px;
-  letter-spacing: 0.03rem;
+  font-size: 2rem;
+  letter-spacing: .03rem;
   color: white;
-  box-shadow: rgba(0, 0, 0, 25%) 0px 0px 1.5px;
+  box-shadow: rgba(53, 47, 47, 25%) 0 0 .1rem .1rem;
   &Inner {
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 1.6rem;
     margin: 0;
-    border: 1px dashed white;
-    border-radius: 1px;
+    border: .1rem dashed white;
+    border-radius: .1rem;
   }
 }
 
 .gray {
-  background-image: url("/assets/background-images/wool-gray.png");
-  &:hover {
-    background-image: url("/assets/background-images/wool-gray-light.png");
+  background-image: $wool;
+  &:hover, &:focus-visible {
+    background-image: $light-wool;
   }
   &:active {
-    background-image: url("/assets/background-images/wool-gray-dark.png");
+    background-image: $dark-wool;
   }
 }
 .red {
-  background-image: url("/assets/background-images/wool-red.png");
-  &:hover {
-    background-image: url("/assets/background-images/wool-red-light.png");
+  background-image: $red-wool;
+  &:hover, &:focus-visible {
+    background-image: $light-red-wool;
   }
   &:active {
-    background-image: url("/assets/background-images/wool-red-dark.png");
+    background-image: $dark-red-wool;
   }
 }
 .green {
-  background-image: url("/assets/background-images/wool-green.png");
-  &:hover {
-    background-image: url("/assets/background-images/wool-green-light.png");
+  background-image: $green-wool;
+  &:hover, &:focus-visible {
+    background-image: $light-green-wool;
   }
   &:active {
-    background-image: url("/assets/background-images/wool-green-dark.png");
+    background-image: $dark-green-wool;
   }
 }
 .yellow {
-  background-image: url("/assets/background-images/wool-yellow.png");
-  &:hover {
-    background-image: url("/assets/background-images/wool-yellow-light.png");
+  background-image: $yellow-wool;
+  &:hover, &:focus-visible {
+    background-image: $light-yellow-wool;
   }
   &:active {
-    background-image: url("/assets/background-images/wool-yellow-dark.png");
+    background-image: $dark-yellow-wool;
   }
 }

@@ -5,7 +5,6 @@ image_upload_path = 'image_uploads/'
 
 class Banner(models.Model):
     main_text = models.CharField(max_length=80)
-    button_label = models.CharField(max_length=50)
     image1 = models.ImageField(default='', upload_to=image_upload_path)
     image1_alt_text = models.CharField(default='', max_length=255)
     image2 = models.ImageField(default='', upload_to=image_upload_path)
@@ -16,6 +15,8 @@ class Banner(models.Model):
     image4_alt_text = models.CharField(default='', max_length=255)
     image5 = models.ImageField(default='', upload_to=image_upload_path)
     image5_alt_text = models.CharField(default='', max_length=255)
+    button_label = models.CharField(max_length=50)
+    nudge_text = models.CharField(default='', max_length=255)
 
 class Speltak(models.Model):
     name = models.CharField(max_length=50)
