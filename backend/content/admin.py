@@ -5,6 +5,11 @@ from .models import Banner, Speltak, LeidingLid, AgendaItem, ScoutingAppInfo, Hu
 class BannerAdmin(admin.ModelAdmin):
     list_display = ('main_text', 'button_label')
 
+    def has_add_permission(self, request):
+        return False
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 class SpeltakAdmin(admin.ModelAdmin):
     list_display = ('name', 'age_range')
 
@@ -17,12 +22,26 @@ class AgendaItemAdmin(admin.ModelAdmin):
 class ScoutingAppInfoAdmin(admin.ModelAdmin):
     list_display = ('title',)
 
+    def has_add_permission(self, request):
+        return False
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 class HuurInfoAdmin(admin.ModelAdmin):
     list_display = ('title',)
+
+    def has_add_permission(self, request):
+        return False
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 class FooterAdmin(admin.ModelAdmin):
     list_display = ('social_media_title', 'contact_verhuur_title', 'vrienden_title', 'documenten_title')
 
+    def has_add_permission(self, request):
+        return False
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 admin.site.register(Banner, BannerAdmin)
 admin.site.register(Speltak, SpeltakAdmin)

@@ -4,17 +4,17 @@ interface NudgeProps {
 	className?: string,
   date: Date,
 	title: string,
-  involvedSpeltakken: string[]
+  involvedSpeltakken: string[],
+  maxAmountOfSpeltakken: number
 }
 
 const AgendaItem: React.FC<NudgeProps> = ({
 	className,
   date,
 	title,
-  involvedSpeltakken
+  involvedSpeltakken,
+  maxAmountOfSpeltakken
 }) => {
-  const maxAmountOfSpeltakken = 7;
-
   const monthNamesAbbreviated = [
     "jan", "feb", "mar", "apr",
     "mei", "jun", "jul", "aug",

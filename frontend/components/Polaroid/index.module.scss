@@ -4,7 +4,6 @@
   gap: .6rem;
   align-items: center;
   width: 35.8rem;
-  height: 28.9rem;
   background-color: white;
   padding: 1.6rem 1.6rem .8rem 1.6rem;
   filter: drop-shadow(0 .2rem .2rem rgba(0, 0, 0, 15%));
@@ -32,6 +31,8 @@
 
   &Description {
     height: 2.7rem;
+    display: flex;
+    align-items: center;
     &Text {
       margin: 0;
       font-family: 'Bubblegum Sans';

@@ -2,6 +2,7 @@ import django
 from django.db import models
 
 image_upload_path = 'image_uploads/'
+file_upload_path = 'file_uploads/'
 
 class Banner(models.Model):
     main_text = models.CharField(max_length=80)
@@ -50,39 +51,54 @@ class AgendaItem(models.Model):
         return self.name
 
 class ScoutingAppInfo(models.Model):
-    title = models.CharField(max_length=50)
+    home_title = models.CharField(default='', max_length=50)
+    home_image = models.ImageField(default='', upload_to=image_upload_path)
+    home_image_alt_text = models.CharField(default='', max_length=255)
+    home_image_caption = models.CharField(default='', max_length=100)
+    home_paragraph_text = models.CharField(default='', max_length=1000)
+    home_button_label = models.CharField(default='', max_length=50)
+    title = models.CharField(default='', max_length=50)
     image = models.ImageField(default='', upload_to=image_upload_path)
     image_alt_text = models.CharField(default='', max_length=255)
-    image_caption = models.CharField(max_length=100)
-    paragraph_text = models.CharField(max_length=1000)
-    button_label = models.CharField(max_length=50)
+    image_caption = models.CharField(default='', max_length=100)
+    paragraph_1_text = models.CharField(default='', max_length=1000)
+    paragraph_2_title = models.CharField(default='', max_length=50)
+    paragraph_2_text = models.CharField(default='', max_length=1000)
 
 class HuurInfo(models.Model):
-    title = models.CharField(max_length=50)
+    home_title = models.CharField(default='', max_length=50)
+    home_image1 = models.ImageField(default='', upload_to=image_upload_path)
+    home_image1_alt_text = models.CharField(default='', max_length=255)
+    home_image2 = models.ImageField(default='', upload_to=image_upload_path)
+    home_image2_alt_text = models.CharField(default='', max_length=255)
+    home_image3 = models.ImageField(default='', upload_to=image_upload_path)
+    home_image3_alt_text = models.CharField(default='', max_length=255)
+    home_paragraph_text = models.CharField(default='', max_length=1000)
+    home_button_label = models.CharField(default='', max_length=50)
+    title = models.CharField(default='', max_length=50)
     image1 = models.ImageField(default='', upload_to=image_upload_path)
     image1_alt_text = models.CharField(default='', max_length=255)
     image2 = models.ImageField(default='', upload_to=image_upload_path)
     image2_alt_text = models.CharField(default='', max_length=255)
     image3 = models.ImageField(default='', upload_to=image_upload_path)
     image3_alt_text = models.CharField(default='', max_length=255)
-    paragraph_text = models.CharField(max_length=1000)
-    button_label = models.CharField(max_length=50)
+    paragraph_1_text = models.CharField(default='', max_length=1000)
+    paragraph_2_title = models.CharField(default='', max_length=50)
+    paragraph_2_text = models.CharField(default='', max_length=1000)
+    paragraph_3_title = models.CharField(default='', max_length=50)
+    paragraph_3_text = models.CharField(default='', max_length=1000)
+    paragraph_4_title = models.CharField(default='', max_length=50)
+    paragraph_4_text = models.CharField(default='', max_length=1000)
+    verhuur_verantwoordelijke = models.ManyToManyField(LeidingLid)
 
 class Footer(models.Model):
     social_media_title = models.CharField(max_length=50)
     social_media_paragraph_text = models.CharField(max_length=1000)
-    facebook_button_label = models.CharField(max_length=50)
-    facebook_button_link = models.URLField
-    instagram_button_label = models.CharField(max_length=50)
-    instagram_button_link = models.URLField
+    facebook_button_link = models.CharField(default='', max_length=9999)
+    instagram_button_link = models.CharField(default='', max_length=9999)
     contact_verhuur_title = models.CharField(max_length=50)
     contact_verhuur_paragraph_text = models.CharField(max_length=1000)
-    contact_button_label = models.CharField(max_length=50)
-    verhuur_button_label = models.CharField(max_length=50)
     vrienden_title = models.CharField(max_length=50)
     vrienden_paragraph_text = models.CharField(max_length=1000)
-    vrienden_button_label = models.CharField(max_length=50)
     documenten_title = models.CharField(max_length=50)
-    huishoudelijk_regelement_button_label = models.CharField(max_length=50)
-    huishoudelijk_regelement = models.FileField(default='')
-    privacybeleid_button_label = models.CharField(max_length=50)
+    huishoudelijk_regelement = models.FileField(default='', upload_to=file_upload_path)

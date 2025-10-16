@@ -4,8 +4,28 @@
   padding: 6.4rem 1.6rem;
   display: flex;
   flex-direction: column;
+  gap: 6.4rem;
 }
 
 .polaroid {
   align-self: center;
+}
+
+.agenda {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  margin-bottom: 1.6rem;
+}
+
+.scoutingApp {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem
+}
+
+.verhuur {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem
 }

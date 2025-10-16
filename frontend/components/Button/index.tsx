@@ -4,6 +4,7 @@ import styles from './index.module.scss'
 interface ButtonProps {
 	className?: string,
 	linkTo?: string,
+	target?: string,
 	onClick?: () => void,
 	label: string,
 	color: 'gray' | 'red' | 'green' | 'yellow'
@@ -13,6 +14,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
 	className,
 	linkTo,
+	target,
 	onClick,
 	label,
 	color
@@ -27,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
 		<>
 			{linkTo ? 
 				<Link 
-					href={linkTo} className={`${className && className} ${colorClassName} ${styles.button}`}>
+					href={linkTo} target={target} className={`${className && className} ${colorClassName} ${styles.button}`}>
 					<div className={styles.buttonInner}>
 						{label}
 					</div>
