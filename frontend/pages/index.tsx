@@ -6,6 +6,7 @@ import Polaroid from '@/components/Polaroid';
 import React from 'react';
 import AgendaItem from '@/components/AgendaItem';
 import Footer from '@/components/Footer';
+import PolaroidCollection from '@/components/PolaroidCollection';
 
 interface IHomePageTypes {
   bannerData: Array<any>;
@@ -59,8 +60,8 @@ export default function Home({
           {/* agenda sectie */}
           <section>
             <h2>Agenda</h2>
-            <div className={styles.agenda}>
-              {agendaData.sort((a, b) => a.date > b.date ? 1 : a.date < b.date ? -1 : 0).slice(0, 6).map((element, key) =>
+            {agendaData ? <div className={styles.agenda}>
+              {agendaData.sort((a, b) => a.date > b.date ? 1 : a.date < b.date ? -1 : 0).slice(0, 5).map((element, key) =>
                 <div key={key}>
                   {/* TODO: remove item from backend if date has passed */}
                   <AgendaItem
@@ -71,7 +72,7 @@ export default function Home({
                   />
                 </div>
               )}
-            </div>
+            </div> : <p>Als we weer iets plannen, dan komt het hier te staan!</p>}
             <Button
               linkTo='placeholder'
               label='Agenda bekijken'
@@ -104,7 +105,14 @@ export default function Home({
           {verhuurData.map((element, key) => 
             <section className={styles.verhuur} key={key}>
               <h2>{element.home_title}</h2>
-              {/* polaroid collectie */}
+              <PolaroidCollection
+                imageFile1='/assets/images/spaghetti.jpg'
+                altText1='Spaghetti'
+                imageFile2='/assets/images/spaghetti.jpg'
+                altText2='Spaghetti'
+                imageFile3='/assets/images/spaghetti.jpg'
+                altText3='Spaghetti'
+              />
               <p>{element.home_paragraph_text}</p>
               <Button
                 linkTo='placeholder'

@@ -1,6 +1,6 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props"
-import Image from "next/image"
 import styles from './index.module.scss'
+import SmallPolaroid from "./SmallPolaroid"
 
 interface PolaroidProps {
   className?: string,
@@ -23,7 +23,20 @@ const PolaroidCollection: React.FC<PolaroidProps> = ({
 }) => {
   return (
     <div className={`${styles.polaroidCollection} ${className && className}`}>
-      {/* Add small polaroids */}
+      <SmallPolaroid 
+        className={styles.photoA}
+        imageFile={imageFile1}
+        altText={altText1}
+      />
+      <SmallPolaroid 
+        className={styles.photoB}
+        imageFile={imageFile2}
+        altText={altText2}
+      /><SmallPolaroid 
+        className={styles.photoC}
+        imageFile={imageFile3}
+        altText={altText3}
+      />
     </div>
   )
 }

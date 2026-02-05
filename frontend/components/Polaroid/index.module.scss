@@ -1,3 +1,5 @@
+@import '../../styles/utils/collection';
+
 .polaroid {
   display: flex;
   flex-direction: column;
@@ -10,7 +12,7 @@
 
   &Pin {
     position: absolute;
-    background-color: #FCFDFE;
+    background-color: $rust-000;
     width: 2.2rem;
     height: 2.2rem;
     border-radius: 1.1rem;
@@ -38,7 +40,7 @@
       font-family: 'Bubblegum Sans';
       font-weight: normal;
       letter-spacing: .03rem;
-      color: #8D939E;
+      color: $rust-500;
     }
   }
 }

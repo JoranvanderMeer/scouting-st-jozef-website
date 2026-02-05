@@ -1,0 +1,24 @@
+@import '../../styles/utils/collection';
+
+.polaroidCollection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 38rem;
+}
+
+.photoA {
+  transform: rotate(-6deg);
+}
+.photoB {
+  align-self: flex-end;
+  transform: rotate(6deg);
+  position: relative;
+  top: -5rem;
+}
+.photoC {
+  transform: rotate(10deg);
+  position: relative;
+  top: -10rem;
+}
