@@ -1,5 +1,9 @@
 @import '../../styles/utils/semantic-variables';
 
 .nudge {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
   color: $subtle-text-color;
+  margin-top: 8rem;
 }

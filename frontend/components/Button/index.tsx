@@ -31,13 +31,13 @@ const Button: React.FC<ButtonProps> = ({
 				<Link 
 					href={linkTo} target={target} className={`${className && className} ${colorClassName} ${styles.button}`}>
 					<div className={styles.buttonInner}>
-						{label}
+						<span className={styles.buttonLabel}>{label}</span>
 					</div>
 				</Link>
 			: 
 				<button className={`${className && className} ${styles.button}`} onClick={onClick}>
 					<div className={styles.buttonInner}>
-						{label}
+						<span className={styles.buttonLabel}>{label}</span>
 					</div>
 				</button>
 			}

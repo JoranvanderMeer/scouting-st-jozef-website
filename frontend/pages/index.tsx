@@ -7,6 +7,8 @@ import React from 'react';
 import AgendaItem from '@/components/AgendaItem';
 import Footer from '@/components/Footer';
 import PolaroidCollection from '@/components/PolaroidCollection';
+import SpeltakLink from '@/components/SpeltakLink';
+import MainBanner from '@/components/MainBanner';
 
 interface IHomePageTypes {
   bannerData: Array<any>;
@@ -35,29 +37,60 @@ export default function Home({
             <div key={key}>
 
               {/* mainbanner component */}
-              <p>{element.main_text}</p>
-              <Polaroid
-                className={styles.polaroid}
+              <MainBanner
+                mainText={element.main_text}
                 imageFile={
                   // TODO: change to working CMS image: element.[correct image name in CMS]
                   '/assets/images/spaghetti.jpg'
-                }
+                } 
                 altText={element.image1_alt_text}
-                // description='Spaghetti bolognese'
-                rotation='left'
-              />
-              <Button
-                linkTo='/speltakken'
-                label={element.button_label}
-                color={'green'}
+                buttonLabel={element.button_label}
               />
 
               <Nudge label={element.nudge_text}/>
             </div>
           )}
-          {/* speltakken sectie */}
 
-          {/* agenda sectie */}
+          {/* speltakken sectie */}
+          <section>
+            <h2>Speltakken</h2>
+              <SpeltakLink
+                speltakName='Bevers'
+                age='4-7 jaar'
+                imageFile={
+                  // TODO: change to working CMS image: element.[correct image name in CMS]
+                  '/assets/images/spaghetti.jpg'
+                }
+                imageAltText='Bevers'
+                color='#DE5B5B'
+              />
+              <SpeltakLink
+                speltakName='Welpen'
+                age='7-11 jaar'
+                imageFile={
+                  // TODO: change to working CMS image: element.[correct image name in CMS]
+                  '/assets/images/spaghetti.jpg'
+                }
+                imageAltText='Welpen'
+                color='#31C378'
+              />
+              <SpeltakLink
+                speltakName='Verkenners & Scouts'
+                age='11-15 jaar'
+                imageFile={
+                  // TODO: change to working CMS image: element.[correct image name in CMS]
+                  '/assets/images/spaghetti.jpg'
+                }
+                imageAltText='Verkenners'
+                color='#DDCB40'
+              />
+              <Button
+                linkTo='placeholder'
+                label='Alle speltakken bekijken'
+                color='red'
+              />
+          </section>
+
           <section>
             <h2>Agenda</h2>
             {agendaData ? <div className={styles.agenda}>

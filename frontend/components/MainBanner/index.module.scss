@@ -1,0 +1,29 @@
+@import '../../styles/utils/collection';
+
+.mainBanner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+
+  &Board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 11rem;
+    width: 110vw;
+    color: white;
+    text-align: center;
+    background-image: $wood;
+    background-size: 150rem 60rem;
+    // TODO: add dark wood border image
+    filter: drop-shadow(0 .3rem .1rem rgba(0, 0, 0, 40%));
+    transform: rotate(4deg);
+    margin: 2.4rem 0 -4rem 0;
+
+    &Title {
+      width: 80%;
+      filter: drop-shadow(.1rem .1rem 0 black);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import styles from './index.module.scss'
 
-interface NudgeProps {
+interface AgendaItemProps {
 	className?: string,
   date: Date,
 	title: string,
@@ -8,7 +8,7 @@ interface NudgeProps {
   maxAmountOfSpeltakken: number
 }
 
-const AgendaItem: React.FC<NudgeProps> = ({
+const AgendaItem: React.FC<AgendaItemProps> = ({
 	className,
   date,
 	title,
