@@ -9,6 +9,7 @@ import Footer from '@/components/Footer';
 import PolaroidCollection from '@/components/PolaroidCollection';
 import SpeltakLink from '@/components/SpeltakLink';
 import MainBanner from '@/components/MainBanner';
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 interface IHomePageTypes {
   bannerData: Array<any>;
@@ -88,6 +89,7 @@ export default function Home({
                 linkTo='placeholder'
                 label='Alle speltakken bekijken'
                 color='red'
+                icon={faChevronRight}
               />
           </section>
 
@@ -110,6 +112,7 @@ export default function Home({
               linkTo='placeholder'
               label='Agenda bekijken'
               color='red'
+              icon={faChevronRight}
             />
           </section>
 
@@ -131,6 +134,7 @@ export default function Home({
                 linkTo='placeholder'
                 label={element.home_button_label}
                 color='red'
+                icon={faChevronRight}
               />
             </section>
           )}
@@ -151,6 +155,7 @@ export default function Home({
                 linkTo='placeholder'
                 label={element.home_button_label}
                 color='red'
+                icon={faChevronRight}
               />
             </section>
           )}

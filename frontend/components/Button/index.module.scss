@@ -29,6 +29,11 @@
   &Label {
     filter: drop-shadow(.1rem .1rem 0 rgba(0, 0, 0, 60%));
   }
+
+  &Icon {
+    margin-left: .6rem;
+    filter: drop-shadow(.1rem .1rem 0 rgba(0, 0, 0, 60%));
+  }
 }
 
 .gray {

@@ -1,3 +1,4 @@
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import Button from '../Button'
 import styles from './index.module.scss'
 
@@ -24,12 +25,14 @@ const Footer = ({
                   label='Facebook'
                   linkTo={element.facebook_button_link}
                   target='_blank'
+                  icon={faFacebook}
                 />
                 <Button
                   color='red'
                   label='Instagram'
                   linkTo={element.instagram_button_link}
                   target='_blank'
+                  icon={faInstagram}
                 />
               </div>
             </section>
