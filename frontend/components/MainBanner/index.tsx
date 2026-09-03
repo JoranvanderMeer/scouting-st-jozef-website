@@ -25,13 +25,29 @@ const MainBanner: React.FC<PolaroidProps> = ({
       <div className={styles.mainBannerBoard}>
         <h1 className={styles.mainBannerBoardTitle}>{mainText}</h1>
       </div>
-      <Polaroid
-        className={styles.mainBannerPolaroid}
-        imageFile={imageFile}
-        altText={altText}
-        description={description}
-        rotation='left'
-      />
+      <div className={styles.mainBannerPhotos}>
+        <Polaroid
+          className={styles.mainBannerPhotosPolaroid}
+          imageFile={imageFile}
+          altText={altText}
+          description={description}
+          rotation='left'
+        />
+        <Polaroid
+          className={styles.mainBannerPhotosPolaroid + ' ' + styles.hideOnMobile}
+          imageFile={imageFile}
+          altText={altText}
+          description={description}
+          rotation='right'
+        />
+        <Polaroid
+          className={styles.mainBannerPhotosPolaroid + ' ' + styles.hideOnMobile}
+          imageFile={imageFile}
+          altText={altText}
+          description={description}
+          rotation='right'
+        />
+      </div>
       <Button
         linkTo='/speltakken'
         label={buttonLabel}

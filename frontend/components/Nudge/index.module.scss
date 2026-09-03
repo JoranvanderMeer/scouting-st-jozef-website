@@ -1,4 +1,4 @@
-@import '../../styles/utils/semantic-variables';
+@import '../../styles/utils/collection';
 
 .nudge {
   display: flex;
@@ -6,4 +6,10 @@
   justify-content: space-around;
   color: $subtle-text-color;
   margin-top: 8rem;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
 }

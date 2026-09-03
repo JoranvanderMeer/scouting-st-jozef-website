@@ -1,0 +1,17 @@
+.hideOnMobile {
+  @include mobile {
+    display: none;
+  }
+}
+
+.hideOnTablet {
+  @include tablet {
+    display: none;
+  }
+}
+
+.hideOnDesktop {
+  @include desktop {
+    display: none;
+  }
+}

@@ -55,37 +55,40 @@ export default function Home({
           {/* speltakken sectie */}
           <section>
             <h2>Speltakken</h2>
-              <SpeltakLink
-                speltakName='Bevers'
-                age='4-7 jaar'
-                imageFile={
-                  // TODO: change to working CMS image: element.[correct image name in CMS]
-                  '/assets/images/spaghetti.jpg'
-                }
-                imageAltText='Bevers'
-                color='#DE5B5B'
-              />
-              <SpeltakLink
-                speltakName='Welpen'
-                age='7-11 jaar'
-                imageFile={
-                  // TODO: change to working CMS image: element.[correct image name in CMS]
-                  '/assets/images/spaghetti.jpg'
-                }
-                imageAltText='Welpen'
-                color='#31C378'
-              />
-              <SpeltakLink
-                speltakName='Verkenners & Scouts'
-                age='11-15 jaar'
-                imageFile={
-                  // TODO: change to working CMS image: element.[correct image name in CMS]
-                  '/assets/images/spaghetti.jpg'
-                }
-                imageAltText='Verkenners'
-                color='#DDCB40'
-              />
+              <div className={styles.speltaklinks}>
+                <SpeltakLink
+                  speltakName='Bevers'
+                  age='4-7 jaar'
+                  imageFile={
+                    // TODO: change to working CMS image: element.[correct image name in CMS]
+                    '/assets/images/spaghetti.jpg'
+                  }
+                  imageAltText='Bevers'
+                  color='#DE5B5B'
+                />
+                <SpeltakLink
+                  speltakName='Welpen'
+                  age='7-11 jaar'
+                  imageFile={
+                    // TODO: change to working CMS image: element.[correct image name in CMS]
+                    '/assets/images/spaghetti.jpg'
+                  }
+                  imageAltText='Welpen'
+                  color='#31C378'
+                />
+                <SpeltakLink
+                  speltakName='Verkenners & Scouts'
+                  age='11-15 jaar'
+                  imageFile={
+                    // TODO: change to working CMS image: element.[correct image name in CMS]
+                    '/assets/images/spaghetti.jpg'
+                  }
+                  imageAltText='Verkenners'
+                  color='#DDCB40'
+                />
+              </div>
               <Button
+                className={styles.speltaklinksButton}
                 linkTo='placeholder'
                 label='Alle speltakken bekijken'
                 color='red'
@@ -96,7 +99,7 @@ export default function Home({
           <section>
             <h2>Agenda</h2>
             {agendaData ? <div className={styles.agenda}>
-              {agendaData.sort((a, b) => a.date > b.date ? 1 : a.date < b.date ? -1 : 0).slice(0, 5).map((element, key) =>
+              {agendaData.sort((a, b) => a.date > b.date ? 1 : a.date < b.date ? -1 : 0).slice(0, 6).map((element, key) =>
                 <div key={key}>
                   {/* TODO: remove item from backend if date has passed */}
                   <AgendaItem
@@ -107,6 +110,7 @@ export default function Home({
                   />
                 </div>
               )}
+              {/* TOD: design empty state for agenda */}
             </div> : <p>Als we weer iets plannen, dan komt het hier te staan!</p>}
             <Button
               linkTo='placeholder'

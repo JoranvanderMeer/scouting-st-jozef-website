@@ -5,10 +5,39 @@
   display: flex;
   flex-direction: column;
   gap: 8rem;
+  @include tablet {
+    padding: 8rem 6.4rem;
+  }
+  @include desktop {
+    padding: 9.6rem 14.4rem;
+  }
 }
 
 .polaroid {
   align-self: center;
+}
+
+.speltaklinks {
+  @include tablet {
+    display: grid;
+    grid-template: 50% 2fr / 50% 1fr;
+    gap: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.4rem;
+    margin-bottom: 3.2rem;
+  }
+  &Button {
+    @include tablet {
+      margin-left: auto;
+    }
+    @include desktop {
+      margin-left: auto;
+    }
+  }
 }
 
 .agenda {
